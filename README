@@ -1,0 +1,16 @@
+npm i
+
+Inside the contracts folder there is interface for AggregatorV3Interface and code of AGS contracts
+
+Inside migrations folder there is code to deploy AGS contracts 
+
+To deploy the contract: truffle migrate --reset
+
+To interact with the deployed contract:
+1. Copy the contract address after migrations
+2. Enter into truffle console 
+3. Inside truffle console:
+    contract_address = "" --> specify copied contract address
+    ags = await AGS.at(contract_address)
+    await ags.adminAddress()
+4. Similarly remianing public variables can be called
